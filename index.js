@@ -8,9 +8,7 @@ function getDataFromApi(artist, title, callback) {
 
     let query = `${artist}/${title}`;
 
-    $.get(LYRICAPI+query, callback, function()  {
-        return callback;
-     }, "json");
+    $.get(LYRICAPI+query, callback, "json");
 
     }
     
