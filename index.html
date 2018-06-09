@@ -8,7 +8,7 @@
 
 -->
 <!DOCTYPE html>
-<html>
+<html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width">
@@ -20,17 +20,23 @@
     <link href="index.css" rel="stylesheet" type="text/css" />
   </head>
   <body>
+    <main role='main'>
     <h1>Song Lyrics</h1>
     <form action="#" class="js-search-form">
+      <label for="query-artist">
         <span>Artist:</span>
-        <input type="text" class="js-query-artist" placeholder="Queen" required>
+        <input type="text" class="js-query-artist" id='query-artist' placeholder="Queen" required>
+        </label>
+        <label for='query-title'>
         <span>Song title:</span>
-        <input type="text" class="js-query-title" placeholder="Under Pressure" required>
+        <input type="text" class="js-query-title" id='query-title' placeholder="Under Pressure" required>
+        </label>
         <button type="submit">Search</button>
     </form>
-    <div class="js-search-results">
+    <div class="js-search-results" role='presentation' aria-live="assertive">
             <!--Lyrics display here-->
     </div>
     <script src="index.js"></script>
+    </main>
   </body>
 </html>
